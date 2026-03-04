@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mari Pierami — Psicóloga Online</title>
+  <meta name="description" content="Psicóloga especializada em TCC. Atendimento particular 100% online para todo o Brasil.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Mulish:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ════ NAV ════ -->
+<header id="hdr">
+
+  <a href="#" class="logo">
+    <span class="logo-name">Mari Pierami</span>
+    <span class="logo-rule"></span>
+    <span class="logo-crp">CRP 06/12345</span>
+  </a>
+
+  <nav class="nav-links">
+    <a href="#sobre"    class="nl">Sobre</a>
+    <a href="#servicos" class="nl">Serviços</a>
+    <a href="#faq"      class="nl">FAQ</a>
+    <span class="nav-divider"></span>
+    <a href="#contato" class="nav-cta">
+      Agendar Consulta
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </nav>
+
+  <button class="burger" id="burger" aria-label="Menu">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="drawer" id="drawer">
+  <div class="drawer-logo">Mari Pierami</div>
+  <a href="#sobre"    onclick="closeDrawer()">Sobre</a>
+  <a href="#servicos" onclick="closeDrawer()">Serviços</a>
+  <a href="#faq"      onclick="closeDrawer()">FAQ</a>
+  <a href="#contato"  onclick="closeDrawer()">Agendar Consulta</a>
+  <div class="drawer-foot">CRP 06/12345 · Atendimento Particular · Online</div>
+</div>
+
+<!-- ════ HERO ════ -->
+<section class="hero">
+
+  <!-- Coluna esquerda: texto -->
+  <div class="hero-copy">
+    <p class="hero-pretitle">
+      <span class="dot-pulse"></span>
+      Psicóloga · TCC · 100 % Online
+    </p>
+
+    <h1 class="hero-h1">
+      Espaço para<br>
+      você <em>florescer</em><br>
+      de dentro.
+    </h1>
+
+    <p class="hero-sub">
+      Atendimento psicológico particular e online para quem busca mais leveza, autoconhecimento e bem-estar — em qualquer lugar do Brasil.
+    </p>
+
+    <div class="hero-actions">
+      <a href="https://wa.me/5511999999999" class="btn-primary" target="_blank">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        WhatsApp
+      </a>
+      <a href="#servicos" class="btn-line">Ver Serviços →</a>
+    </div>
+
+    <div class="hero-badges">
+      <div class="hbadge"><span>8+</span>anos de experiência</div>
+      <div class="hbadge"><span>500+</span>pacientes atendidos</div>
+      <div class="hbadge"><span>CRP</span>06/12345</div>
+    </div>
+  </div>
+
+  <!-- Coluna direita: imagem -->
+  <div class="hero-visual">
+    <div class="hero-img-frame">
+      <img src="mari-hero.jpg" alt="Mari Pierami — Psicóloga Online">
+      <div class="hero-img-overlay"></div>
+    </div>
+    <!-- cartão flutuante -->
+    <div class="hero-float-card">
+      <div class="hfc-icon">🔒</div>
+      <div class="hfc-text">
+        <strong>Sigilo garantido</strong>
+        <span>Ética profissional · CFP</span>
+      </div>
+    </div>
+    <!-- label CRP -->
+    <div class="hero-crp">E-Psi · CRP 06/12345</div>
+  </div>
+
+  <!-- decoração de fundo -->
+  <div class="hero-arc"></div>
+</section>
+
+<!-- ════ STRIP ════ -->
+<div class="strip">
+  <span>✦ Terapia Cognitivo-Comportamental</span>
+  <span>✦ Atendimento Particular</span>
+  <span>✦ 100% Online</span>
+  <span>✦ Todo o Brasil</span>
+  <span>✦ Sigilo Total</span>
+  <span>✦ E-Psi Credenciada</span>
+  <span>✦ Adultos · Adolescentes · Casais</span>
+  <span>✦ Terapia Cognitivo-Comportamental</span>
+  <span>✦ Atendimento Particular</span>
+  <span>✦ 100% Online</span>
+  <span>✦ Todo o Brasil</span>
+  <span>✦ Sigilo Total</span>
+</div>
+
+<!-- ════ SOBRE ════ -->
+<section class="sobre" id="sobre">
+
+  <div class="sobre-heading ri">
+    <p class="section-label">Sobre Mim</p>
+    <h2>Quem está ao<br>seu lado nessa<br><em>jornada</em></h2>
+  </div>
+
+  <div class="sobre-body-col ri">
+    <p>Sou Mari Pierami, Psicóloga formada pela USP com especialização em Terapia Cognitivo-Comportamental (TCC) e mais de 8 anos de experiência clínica. Meu trabalho é guiado pela escuta empática e pela crença de que a mudança é sempre possível.</p>
+    <blockquote>"Acredito que o autoconhecimento é o caminho mais poderoso para uma vida mais plena e significativa."</blockquote>
+    <p>Atendo adultos, adolescentes e casais de forma 100% online — com a mesma qualidade e sigilo de um atendimento presencial. Cada processo é único, construído no seu ritmo.</p>
+  </div>
+
+  <div class="sobre-creds ri">
+    <div class="cred-item"><div class="ci-bar"></div><span>Psicóloga — Universidade de São Paulo (USP)</span></div>
+    <div class="cred-item"><div class="ci-bar"></div><span>Especialização TCC — Instituto Beck (2017)</span></div>
+    <div class="cred-item"><div class="ci-bar"></div><span>Membro da Sociedade Brasileira de Psicologia</span></div>
+    <div class="cred-item"><div class="ci-bar"></div><span>Credenciada E-Psi pelo CFP</span></div>
+  </div>
+
+  <!-- cards de destaque -->
+  <div class="sobre-cards ri">
+    <div class="scard">
+      <div class="scard-num">01</div>
+      <h4>Sigilo Total</h4>
+      <p>Código de ética do CFP garantido. Suas informações nunca serão compartilhadas.</p>
+    </div>
+    <div class="scard">
+      <div class="scard-num">02</div>
+      <h4>Online · Brasil todo</h4>
+      <p>Sessões por videochamada no seu ambiente, com a comodidade que você merece.</p>
+    </div>
+    <div class="scard accent">
+      <div class="scard-num">03</div>
+      <h4>Atendimento Particular</h4>
+      <p>Pix, cartão ou transferência. Emito recibos para reembolso junto ao seu plano.</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- ════ SERVIÇOS ════ -->
+<section class="servicos" id="servicos">
+  <div class="sec-intro ri">
+    <p class="section-label">Serviços</p>
+    <h2>Como posso<br>te <em>ajudar</em></h2>
+    <p class="sec-desc">Modalidades pensadas para caber na sua rotina — com segurança, privacidade e cuidado real.</p>
+  </div>
+
+  <div class="srv-grid">
+    <div class="srv-item ri" style="--d:0s">
+      <div class="srv-top">
+        <span class="srv-num">01</span>
+        <span class="srv-ico">💻</span>
+      </div>
+      <h3>Atendimento Online</h3>
+      <p>Videochamada segura para todo o Brasil, com credenciamento E-Psi do CFP e total privacidade.</p>
+      <div class="srv-tag">Todo o Brasil</div>
+    </div>
+    <div class="srv-item ri" style="--d:.07s">
+      <div class="srv-top">
+        <span class="srv-num">02</span>
+        <span class="srv-ico">🧠</span>
+      </div>
+      <h3>Psicoterapia Individual</h3>
+      <p>Ansiedade, depressão, traumas e autoestima — um espaço dedicado ao seu crescimento.</p>
+      <div class="srv-tag">Adultos & Adolescentes</div>
+    </div>
+    <div class="srv-item ri" style="--d:.14s">
+      <div class="srv-top">
+        <span class="srv-num">03</span>
+        <span class="srv-ico">👶</span>
+      </div>
+      <h3>Psicoterapia Infantil</h3>
+      <p>Recursos lúdicos adaptados ao online para o desenvolvimento emocional saudável.</p>
+      <div class="srv-tag">4 a 12 anos</div>
+    </div>
+    <div class="srv-item ri" style="--d:.21s">
+      <div class="srv-top">
+        <span class="srv-num">04</span>
+        <span class="srv-ico">💑</span>
+      </div>
+      <h3>Terapia de Casal</h3>
+      <p>Comunicação, conflitos e reconexão — um espaço neutro para o relacionamento crescer.</p>
+      <div class="srv-tag">Casais</div>
+    </div>
+    <div class="srv-item ri" style="--d:.28s">
+      <div class="srv-top">
+        <span class="srv-num">05</span>
+        <span class="srv-ico">🌿</span>
+      </div>
+      <h3>Saúde Mental no Trabalho</h3>
+      <p>Burnout, estresse e síndrome do impostor — suporte para quem precisa equilibrar tudo.</p>
+      <div class="srv-tag">Profissionais</div>
+    </div>
+    <div class="srv-item ri" style="--d:.35s">
+      <div class="srv-top">
+        <span class="srv-num">06</span>
+        <span class="srv-ico">✨</span>
+      </div>
+      <h3>Avaliação Psicológica</h3>
+      <p>Laudos e relatórios com rigor técnico para finalidades específicas.</p>
+      <div class="srv-tag">Sob consulta</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ BANNER PARTICULAR ════ -->
+<section class="banner-part">
+  <div class="bp-left ri">
+    <p class="section-label inv">Atendimento Particular</p>
+    <h2>Sem convênio.<br><em>Com dedicação total.</em></h2>
+    <p>Meu foco é a qualidade real de cada processo terapêutico. Por isso, atendo exclusivamente de forma particular — garantindo presença, cuidado e personalização que fazem diferença.</p>
+  </div>
+  <div class="bp-right ri">
+    <div class="bp-item">
+      <div class="bp-check">✓</div>
+      <div><strong>Pix, cartão e transferência</strong><br><small>Facilidade total no pagamento</small></div>
+    </div>
+    <div class="bp-item">
+      <div class="bp-check">✓</div>
+      <div><strong>Recibo para reembolso</strong><br><small>Para planos que oferecem cobertura</small></div>
+    </div>
+    <div class="bp-item">
+      <div class="bp-check">✓</div>
+      <div><strong>Dados 100 % protegidos</strong><br><small>Nunca compartilhados com terceiros</small></div>
+    </div>
+    <div class="bp-item">
+      <div class="bp-check">✓</div>
+      <div><strong>Sessão inicial de alinhamento</strong><br><small>Para conhecer suas necessidades</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FAQ ════ -->
+<section class="faq-sec" id="faq">
+  <div class="faq-intro ri">
+    <p class="section-label">Dúvidas</p>
+    <h2>Perguntas<br><em>frequentes</em></h2>
+    <p>Dar o primeiro passo pode gerar muitas perguntas. Aqui estão as mais comuns.</p>
+    <a href="#contato" class="btn-line mt">Ainda tem dúvidas? →</a>
+  </div>
+
+  <div class="faq-col ri">
+    <div class="faq-item">
+      <button class="fq" onclick="toggleFaq(this)">
+        <span>Quanto tempo dura cada sessão?</span><div class="fq-ico"></div>
+      </button>
+      <div class="fa">Cada sessão tem 50 minutos — o tempo padrão para a psicoterapia. A frequência habitual é semanal, mas pode ser ajustada conforme suas necessidades.</div>
+    </div>
+    <div class="faq-item">
+      <button class="fq" onclick="toggleFaq(this)">
+        <span>Minhas informações ficam em sigilo?</span><div class="fq-ico"></div>
+      </button>
+      <div class="fa">Sim. O sigilo profissional é garantido pelo Código de Ética do CFP. Tudo que compartilhamos em sessão permanece estritamente entre nós.</div>
+    </div>
+    <div class="faq-item">
+      <button class="fq" onclick="toggleFaq(this)">
+        <span>Aceita convênio ou plano de saúde?</span><div class="fq-ico"></div>
+      </button>
+      <div class="fa">Não. Trabalho exclusivamente de forma particular. Porém, emito recibos para que você solicite reembolso junto ao seu plano, se ele oferecer essa cobertura.</div>
+    </div>
+    <div class="faq-item">
+      <button class="fq" onclick="toggleFaq(this)">
+        <span>Como funciona o atendimento online?</span><div class="fq-ico"></div>
+      </button>
+      <div class="fa">Regulamentado pelo CFP e com a mesma eficácia do presencial. Sessões por videochamada segura — você precisa apenas de conexão estável e ambiente privado.</div>
+    </div>
+    <div class="faq-item">
+      <button class="fq" onclick="toggleFaq(this)">
+        <span>Como é a primeira consulta?</span><div class="fq-ico"></div>
+      </button>
+      <div class="fa">Um espaço de acolhimento mútuo. Você conta o que te trouxe até aqui e traçamos juntos um entendimento inicial. Sem pressão nem certo ou errado.</div>
+    </div>
+    <div class="faq-item">
+      <button class="fq" onclick="toggleFaq(this)">
+        <span>Quanto tempo dura o processo terapêutico?</span><div class="fq-ico"></div>
+      </button>
+      <div class="fa">Cada processo é único. Algumas pessoas sentem melhoras em poucos meses; outras preferem a terapia como parte contínua do autocuidado. Você tem total autonomia.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ CONTATO ════ -->
+<section class="contato-sec" id="contato">
+  <div class="ct-left ri">
+    <p class="section-label">Contato</p>
+    <h2>Pronto para<br>o primeiro<br><em>passo?</em></h2>
+    <p>Entre em contato pelo canal que preferir. Responderei o mais breve possível.</p>
+
+    <div class="ct-cards">
+      <a href="https://wa.me/5511999999999" class="ct-card" target="_blank">
+        <div class="ct-ico">💬</div>
+        <div class="ct-info"><strong>WhatsApp</strong><span>(11) 99999-9999</span></div>
+        <svg class="ct-arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/cdn-cgi/l/email-protection#3c5f5352485d48537c515d4e554c55594e5d5155125f5351125e4e" class="ct-card">
+        <div class="ct-ico">📧</div>
+        <div class="ct-info"><strong>E-mail</strong><span><span class="__cf_email__" data-cfemail="04676b6a7065706b446965766d746d617665696d2a676b692a6676">[email&#160;protected]</span></span></div>
+        <svg class="ct-arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <div class="ct-card static">
+        <div class="ct-ico">📅</div>
+        <div class="ct-info"><strong>Horários</strong><span>Seg–Sex 8h–20h · Sáb 8h–13h</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ct-form ri">
+    <div id="formWrap">
+      <h3>Envie uma mensagem</h3>
+      <p>Preencha e entrarei em contato em breve.</p>
+      <div class="frow">
+        <div class="fg"><label>Nome</label><input id="fn" type="text" placeholder="Seu nome completo"></div>
+        <div class="fg"><label>Telefone</label><input id="ft" type="tel" placeholder="(11) 99999-9999"></div>
+      </div>
+      <div class="fg"><label>E-mail</label><input id="fe" type="email" placeholder="seu@email.com.br"></div>
+      <div class="fg">
+        <label>Modalidade</label>
+        <select id="fs">
+          <option value="">Selecione um serviço</option>
+          <option>Psicoterapia Individual Online</option>
+          <option>Psicoterapia Infantil Online</option>
+          <option>Terapia de Casal Online</option>
+          <option>Saúde Mental no Trabalho</option>
+          <option>Avaliação Psicológica</option>
+          <option>Ainda não sei, quero conversar</option>
+        </select>
+      </div>
+      <div class="fg"><label>Mensagem (opcional)</label><textarea id="fm" placeholder="Conte um pouco sobre o que você está buscando..."></textarea></div>
+      <div class="fpriv">
+        <input type="checkbox" id="fp" checked>
+        <label for="fp">Concordo com o tratamento dos meus dados conforme a LGPD. Seus dados nunca serão compartilhados.</label>
+      </div>
+      <button class="btn-submit" onclick="submitForm()">Enviar mensagem →</button>
+    </div>
+    <div class="form-ok" id="formOk">
+      <div class="ok-icon">🌿</div>
+      <h4>Mensagem recebida!</h4>
+      <p>Responderei em breve com todo o cuidado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FOOTER ════ -->
+<footer>
+  <div class="ft-grid">
+    <div class="ft-brand">
+      <div class="ft-logo">Mari Pierami</div>
+      <p>Psicóloga especialista em TCC. Atendimento particular 100% online para todo o Brasil.</p>
+      <div class="ft-socials">
+        <a href="#">Ig</a><a href="#">Li</a><a href="https://wa.me/5511999999999">Wa</a>
+      </div>
+    </div>
+    <div class="ft-col">
+      <h5>Serviços</h5>
+      <a href="#servicos">Psicoterapia Individual</a>
+      <a href="#servicos">Psicoterapia Infantil</a>
+      <a href="#servicos">Terapia de Casal</a>
+      <a href="#servicos">Saúde Mental no Trabalho</a>
+      <a href="#servicos">Avaliação Psicológica</a>
+    </div>
+    <div class="ft-col">
+      <h5>Navegação</h5>
+      <a href="#sobre">Sobre Mim</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <div class="ft-col">
+      <h5>Legal</h5>
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+      <a href="#">Sigilo Profissional</a>
+      <a href="#">LGPD</a>
+    </div>
+  </div>
+  <div class="ft-bar">
+    <span>© 2025 Mari Pierami · Todos os direitos reservados</span>
+    <span class="ft-crp">⚕ CRP 06 / 12345</span>
+  </div>
+</footer>
+
+<!-- WA FLOAT -->
+<a class="wa-float" href="https://wa.me/5511999999999" target="_blank">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0
