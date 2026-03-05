@@ -762,23 +762,13 @@ footer{
    SCROLL REVEAL — CSS puro, sem JS
 ════════════════════════════════════ */
 /* ════════════════════════════════════
-   SCROLL REVEAL — animação CSS pura
+   SCROLL REVEAL
 ════════════════════════════════════ */
+/* Todos os elementos .ri ficam visíveis por padrão */
 .ri{
-  animation: revealUp .7s var(--ease) both;
+  opacity:1;
+  transform:none;
 }
-@keyframes revealUp{
-  from{ opacity:0; transform:translateY(28px) }
-  to{   opacity:1; transform:translateY(0) }
-}
-
-/* Stagger nos serviços */
-.srv-item:nth-child(1){ animation-delay:.00s }
-.srv-item:nth-child(2){ animation-delay:.08s }
-.srv-item:nth-child(3){ animation-delay:.16s }
-.srv-item:nth-child(4){ animation-delay:.24s }
-.srv-item:nth-child(5){ animation-delay:.32s }
-.srv-item:nth-child(6){ animation-delay:.40s }
 
 /* ════════════════════════════════════
    KEYFRAMES
@@ -789,54 +779,37 @@ footer{
 
 /* ════════════════════════════════════
    RESPONSIVE — todos os dispositivos
-   1280 → 1024 → 768 → 480 → 360
 ════════════════════════════════════ */
 
-/* ── Tablet landscape (≤1280px) ── */
+/* ── ≤1280px — Tablet landscape ── */
 @media(max-width:1280px){
   #hdr{ padding:0 48px }
   .hero-copy{ padding:110px 48px 72px 56px }
-  .sobre{ padding:100px 56px }
-  .servicos{ padding:100px 56px }
-  .banner-part{ padding:72px 56px }
-  .faq-sec{ padding:100px 56px }
-  .contato-sec{ padding:100px 56px }
-  footer{ padding:64px 56px 28px }
+  .sobre,
+  .servicos,
+  .banner-part,
+  .faq-sec,
+  .contato-sec{ padding-left:56px; padding-right:56px }
+  footer{ padding-left:56px; padding-right:56px }
 }
 
-/* ── Tablet portrait (≤1024px) ── */
+/* ── ≤1024px — Tablet portrait ── */
 @media(max-width:1024px){
-  /* Nav */
   #hdr{ padding:0 36px; height:66px }
 
-  /* Hero: coluna única, foto em cima */
+  /* Hero */
   .hero{ grid-template-columns:1fr; min-height:auto }
-  .hero-visual{
-    order:-1;
-    height:55vw; min-height:320px; max-height:480px;
-    overflow:hidden;
-  }
+  .hero-visual{ order:-1; height:55vw; min-height:320px; max-height:480px; overflow:hidden }
   .hero-img-frame{ position:absolute; inset:0 }
   .hero-img-frame img{ object-position:center 20% }
   .hero-copy{ padding:52px 36px 72px }
   .hero-h1{ font-size:clamp(2.8rem,5.5vw,4rem) }
   .hero-badges{ gap:24px; padding-top:28px; margin-top:36px }
 
-  /* Sobre: coluna única */
-  .sobre{
-    grid-template-columns:1fr;
-    padding:80px 36px;
-    gap:28px 0;
-  }
-  .sobre-heading,
-  .sobre-body-col,
-  .sobre-creds{ grid-column:1; grid-row:auto }
-  .sobre-cards{
-    grid-column:1; grid-row:auto;
-    padding-top:0;
-    grid-template-columns:1fr 1fr;
-    gap:14px;
-  }
+  /* Sobre */
+  .sobre{ grid-template-columns:1fr; padding:80px 36px; gap:28px 0 }
+  .sobre-heading, .sobre-body-col, .sobre-creds{ grid-column:1; grid-row:auto }
+  .sobre-cards{ grid-column:1; grid-row:auto; padding-top:0; grid-template-columns:1fr 1fr; gap:14px }
   .scard.accent{ grid-column:1/-1 }
 
   /* Serviços */
@@ -844,39 +817,28 @@ footer{
   .srv-grid{ grid-template-columns:1fr 1fr; gap:14px }
 
   /* Banner */
-  .banner-part{
-    grid-template-columns:1fr;
-    gap:32px; padding:60px 36px;
-  }
+  .banner-part{ grid-template-columns:1fr; gap:32px; padding:60px 36px }
 
   /* FAQ */
-  .faq-sec{
-    grid-template-columns:1fr;
-    padding:80px 36px; gap:36px;
-  }
+  .faq-sec{ grid-template-columns:1fr; padding:80px 36px; gap:36px }
 
   /* Contato */
-  .contato-sec{
-    grid-template-columns:1fr;
-    padding:80px 36px; gap:40px;
-  }
+  .contato-sec{ grid-template-columns:1fr; padding:80px 36px; gap:40px }
 
   /* Footer */
   footer{ padding:56px 36px 24px }
   .ft-grid{ grid-template-columns:1fr 1fr; gap:36px }
 }
 
-/* ── Mobile grande (≤768px) ── */
+/* ── ≤768px — Mobile ── */
 @media(max-width:768px){
-  /* Nav mobile */
+  /* Nav */
   .nav-links{ display:none }
   .burger{ display:flex }
   #hdr{ padding:0 20px; height:60px }
 
   /* Hero */
-  .hero-visual{
-    height:70vw; max-height:420px;
-  }
+  .hero-visual{ height:70vw; max-height:420px }
   .hero-copy{ padding:36px 20px 60px }
   .hero-h1{ font-size:clamp(2.4rem,8vw,3.2rem); line-height:1.02 }
   .hero-sub{ font-size:.93rem }
@@ -904,37 +866,33 @@ footer{
 
   /* FAQ */
   .faq-sec{ padding:64px 20px; gap:32px }
-  .faq-intro p{ display:none } /* resumo no mobile */
   .fq{ font-size:.95rem }
 
   /* Contato */
-  .contato-sec{ padding:64px 20px; gap:36px }
-  .frow{ grid-template-columns:1fr }
-  .ct-form-wrap{ padding:28px 24px; border-radius:20px }
+  .contato-sec{ padding:64px 20px; gap:32px }
+  .ct-right{ gap:20px }
+  .btn-wa-big{ width:100%; justify-content:center }
 
   /* Footer */
   footer{ padding:48px 20px 20px }
   .ft-grid{ grid-template-columns:1fr; gap:28px }
   .ft-bar{ flex-direction:column; align-items:center; gap:10px; text-align:center }
 
-  /* WA */
+  /* WA float */
   .wa-float{ width:50px; height:50px; bottom:20px; right:20px }
 }
 
-/* ── Mobile médio (≤480px) ── */
+/* ── ≤480px — Mobile médio ── */
 @media(max-width:480px){
   #hdr{ height:56px }
+  .logo-rule, .logo-crp{ display:none }
   .logo-name{ font-size:1.05rem }
-  .logo-rule, .logo-crp{ display:none } /* logo só com nome no mobile */
 
   .hero-visual{ height:78vw; max-height:360px }
   .hero-copy{ padding:28px 16px 52px }
   .hero-h1{ font-size:clamp(2rem,9vw,2.8rem) }
   .hero-pretitle{ font-size:.6rem; margin-bottom:20px }
-  .hero-badges{
-    display:grid; grid-template-columns:1fr 1fr 1fr;
-    gap:12px; padding-top:20px; margin-top:28px;
-  }
+  .hero-badges{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; padding-top:20px; margin-top:28px }
   .hbadge span{ font-size:1.4rem }
 
   .sobre{ padding:52px 16px }
@@ -951,7 +909,8 @@ footer{
   .fq{ font-size:.88rem; padding:20px 0 }
 
   .contato-sec{ padding:52px 16px }
-  .ct-form-wrap{ padding:24px 18px }
+  .ct-trust-bar{ flex-direction:column; align-items:flex-start; gap:8px }
+  .ct-trust-dot{ display:none }
 
   footer{ padding:40px 16px 20px }
   .ft-logo{ font-size:1.1rem }
@@ -960,13 +919,12 @@ footer{
   .wa-float svg{ width:19px; height:19px }
 }
 
-/* ── Mobile pequeno (≤360px) ── */
+/* ── ≤360px — Mobile pequeno ── */
 @media(max-width:360px){
   .hero-h1{ font-size:1.9rem }
   .btn-primary, .btn-line{ font-size:.74rem; padding:13px 20px }
   .hero-badges{ grid-template-columns:1fr 1fr; gap:10px }
   .scard{ padding:20px 18px }
   .srv-item{ padding:20px 16px }
-  .ct-form-wrap{ padding:20px 16px }
   .fq{ font-size:.84rem }
 }
